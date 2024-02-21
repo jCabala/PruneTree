@@ -1,5 +1,52 @@
 # Changelog
 
+## [1.9.0](https://github.com/jCabala/PruneTree/compare/v1.8.1...v1.9.0) (2024-02-21)
+
+
+### Features
+
+* **contributors:** Added a table of contributors visible in the Version page and changed a layout of CONTRIBUTORS file ([49d43dd](https://github.com/jCabala/PruneTree/commit/49d43dd2087fb3a1c6dbf263693d55d39084903d))
+* **contributors:** Installed all-contributors, created a file to store contributors and added two of them ([1b3ac1d](https://github.com/jCabala/PruneTree/commit/1b3ac1d4e3398c6f13f6304bceef3309d776390b))
+* **download:** Added the ability to download a tree as a zip archive to create backups ([8d0bce9](https://github.com/jCabala/PruneTree/commit/8d0bce93fb65c63943d67c31fe8eed73f9fcc3e9))
+* **guides:** Reworked Guides ([971ad77](https://github.com/jCabala/PruneTree/commit/971ad778a841f06b4c1d096338d4adc5f846b7c7))
+* **import:** The import feature now supports the original Plum Tree download format. Please report any issues to https://github.com/TrueKuehli/PruneTree/issues/new/choose ([5f39536](https://github.com/jCabala/PruneTree/commit/5f395361f794ce8bf232201ba55ca19029254f3e))
+* **offline:** Added offline support ([38d8228](https://github.com/jCabala/PruneTree/commit/38d82289dc531b69c5918cb48812335d3d845f37))
+* **storage:** Added storage quota display in the image manager interface ([cce18df](https://github.com/jCabala/PruneTree/commit/cce18df06fa27e122926d4f18f00209ea700d85b))
+* **support:** Added a support page including an FAQ and contact information ([dc06696](https://github.com/jCabala/PruneTree/commit/dc06696c7b66fef926144d98be18766f7d29730f))
+* **version:** Version page now contains a changelog ([bfc29a3](https://github.com/jCabala/PruneTree/commit/bfc29a3462128495d69a6584f3e1e2eb6f0c8623))
+* **video-player:** Added a local storage entry that remembers users video player preference ([dc4d6fd](https://github.com/jCabala/PruneTree/commit/dc4d6fd94ed85b0d4d1d9a0bfc9757a9d32cd4f4))
+* **video-player:** Added a placeholder for the player and the button that if clickd shows the player ([7d34a48](https://github.com/jCabala/PruneTree/commit/7d34a481f8f4a703b7d928dc06819e603d29254a))
+* **video-player:** Moved the video player on the home page to a separate component ([0d6e628](https://github.com/jCabala/PruneTree/commit/0d6e628bc05f720f405489b167ebd9f1814e918a))
+
+
+### Bug Fixes
+
+* **aspirations:** Updated aspirations ([9d39ab4](https://github.com/jCabala/PruneTree/commit/9d39ab46f7e7a30e2c2b89752e00d3dac1991b1a))
+* **database:** Tree nodes no longer include all person data ([a17b368](https://github.com/jCabala/PruneTree/commit/a17b368ec455150de724a398e0f9835d8ab407a1))
+* **docs:** Updated Support page ([98a233b](https://github.com/jCabala/PruneTree/commit/98a233ba026b30e3cbc32788922c40530a69cbbc))
+* **download:** Tree backup filename is now determined from tree title ([763e5d8](https://github.com/jCabala/PruneTree/commit/763e5d8c2b7d8c31e567cdd3f35843ecf1ea3be8))
+* **errors:** Fixed handling of storage quota exceeded errors ([b4578d4](https://github.com/jCabala/PruneTree/commit/b4578d4a5f3ef57af8d451f9426de5eb80ff8076))
+* **errors:** Fixed multiple error reports when fetching data from multiple components at once ([5bed988](https://github.com/jCabala/PruneTree/commit/5bed988a08ed50b30c08eb04790a7e01d6994786))
+* **guides:** Converted guide videos to yuv420 to fix videos being broken on some devices ([32d1042](https://github.com/jCabala/PruneTree/commit/32d1042e7ec27516bf4054a00da70cea2ab1adbe))
+* **image-manager:** Fixed bug where submitting a new crop would count as replacing the image, thus marking the image for deletion ([192841c](https://github.com/jCabala/PruneTree/commit/192841cb094bf772c65d8625392c4629a9f60c09))
+* **import:** Missing attributes are now replace with defaults if missing in a backup ([c27dbf7](https://github.com/jCabala/PruneTree/commit/c27dbf7de4f16d9b5fefed4faa6cde21514aed23))
+* **import:** The import page no longer gets stuck on the loading screen when selecting an invalid backup zip file ([3f1b141](https://github.com/jCabala/PruneTree/commit/3f1b141a14149e699e7014155bc97a0046c5f100))
+* **lifeStates:** Updated life states ([9d39ab4](https://github.com/jCabala/PruneTree/commit/9d39ab46f7e7a30e2c2b89752e00d3dac1991b1a))
+* **navigation:** Fixed version link not closing the sidebar ([1667a89](https://github.com/jCabala/PruneTree/commit/1667a8903fcf356484fee232af6f0e39fc9a7aec))
+* **router:** Moving directly from a TreeDetails page to the "Create a Tree" page now refreshes the component ([2e31efd](https://github.com/jCabala/PruneTree/commit/2e31efdfdd8c6b72d41f8c6482228de4ce1144ce))
+* **storage-estimate:** In some cases, Safari seems to try to call the (undefined) navigator?.storage?.estimate() function, causing pages containing the image manager to not render ([2271425](https://github.com/jCabala/PruneTree/commit/227142584c64b4ac180adcb683332dc90d0a8794))
+* **storage:** The app now request storage persistence from the browser ([aa69d04](https://github.com/jCabala/PruneTree/commit/aa69d04a45b00ea0d9c658c07131e1507ee34727))
+* **traits:** Updated traits ([9d39ab4](https://github.com/jCabala/PruneTree/commit/9d39ab46f7e7a30e2c2b89752e00d3dac1991b1a))
+* **video-player:** Changed useLayoutEffect into useEffect and added a more descriptive text for the button ([d005f10](https://github.com/jCabala/PruneTree/commit/d005f105795571a8a7ffd6f263cdb2c893cfc7cf))
+
+
+### Performance Improvements
+
+* **database:** The database no longer queries the entire image database when deleting a tree ([dae12fe](https://github.com/jCabala/PruneTree/commit/dae12fe930e3d4b585e64539d9c370402024266d))
+* **images:** Added webp version of green polygon background ([a4076ba](https://github.com/jCabala/PruneTree/commit/a4076ba6560c1d4133c1d86dd917dbc2173fd703))
+* **images:** Compressed images used on the Home page and added webp versions which are loaded if supported ([167fb23](https://github.com/jCabala/PruneTree/commit/167fb2346845953d8e2c689935eae4d36f0759c5))
+* **minification:** Scripts and styles are now minified to reduce their size ([38d8228](https://github.com/jCabala/PruneTree/commit/38d82289dc531b69c5918cb48812335d3d845f37))
+
 ## [1.8.1](https://github.com/TrueKuehli/PruneTree/compare/v1.8.0...v1.8.1) (2024-02-14)
 
 
